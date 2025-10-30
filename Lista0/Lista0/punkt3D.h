@@ -29,7 +29,7 @@ public:
 
     void przesun(const wektor3D& wektor); // przesuwa punkt o wektor
 
-    void rzut2D(int a, int b); // rzutowanie punktu3D na os 2D przy pomocy jakiegos parametru d nie wiem o co biega
+    punkt2D rzut2D(int a, int b); // rzutowanie punktu3D na os 2D przy pomocy jakiegos parametru d nie wiem o co biega
 
 };
 

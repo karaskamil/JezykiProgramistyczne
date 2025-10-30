@@ -41,7 +41,7 @@ double wektor2D::dlugosc() const {
     }
 }
 
-double wektor2D::policzKat(const wektor2D& drugi) {
+double wektor2D::policzKat(const wektor2D& drugi) { // dodaj wyjatek kiedy dl1*dl2 wynosi 0
     double iloczyn = this->x1 * drugi.x1 + this->y1 * drugi.y1;
     double dl1 = this->dlugosc();
     double dl2 = drugi.dlugosc();
@@ -51,7 +51,7 @@ double wektor2D::policzKat(const wektor2D& drugi) {
 }
 
 void wektor2D::dodajWektor(const wektor2D& drugi) {
-    if (x0 == 0 && y0 == 0) {
+    if (drugi.x0 == 0 && drugi.y0 == 0) {
         this->x1 += drugi.x1;
         this->y1 += drugi.y1;
     }

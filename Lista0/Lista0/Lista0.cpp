@@ -57,6 +57,7 @@ int main(){
         cout << "objetosc rownolegloboku wynosi " << V << " jednostek szesciennych";
         break;
     }
+
     // CZESC TESTOWA
     /* 
     punkt2D p21 = punkt2D(2, -5);

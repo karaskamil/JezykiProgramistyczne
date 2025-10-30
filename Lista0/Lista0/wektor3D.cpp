@@ -77,7 +77,7 @@ double wektor3D::policzKat(const wektor3D& drugi) {
     return acos(Kat) * 180 / 3.14;
 }
 
-void wektor3D::dodajWektor(const wektor3D& drugi) {
+void wektor3D::dodajWektor(const wektor3D& drugi) { // tutaj brakuje obliczenia z
     if (x0 == 0 && y0 == 0) {
         this->x1 += drugi.x1;
         this->y1 += drugi.y1;
@@ -88,7 +88,7 @@ void wektor3D::dodajWektor(const wektor3D& drugi) {
     }
 }
 
-void wektor3D::odejmijWektor(const wektor3D& drugi) { 
+void wektor3D::odejmijWektor(const wektor3D& drugi) { // tu tez
     if (this->x0 == drugi.x0 && this->y0 == drugi.y0) {
         this->x1 -= drugi.x1;
         this->y1 -= drugi.y1;
@@ -107,7 +107,7 @@ wektor3D wektor3D::iloczynWektorowy(const wektor3D& drugi) const {
     return wektor3D(x, y, z);
 }
 
-int wektor3D::iloczynSkalarny(const wektor3D& drugi)
+int wektor3D::iloczynSkalarny(const wektor3D& drugi) // to powinno uwzgledniac punkt poczatkowy, albo przerobic parametry klasy wektor tak aby byly zapisane od razu odleglosci a nie punkty startowe i koncowe
 {
     return this->wezX()*drugi.wezX() + this->wezY() * drugi.wezY() + this->wezZ() * drugi.wezZ();
 }

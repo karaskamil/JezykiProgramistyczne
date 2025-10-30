@@ -50,13 +50,13 @@ void punkt3D::przesun(const wektor3D &wektor) {
         else {
             x1 += wektor.wezX0() - wektor.wezX();
         }
-        if (wektor.wezX() < wektor.wezX0()) { // jesli wektor skierowany "w dol" odejmij dlugosc, w przeciwnym wypadku dodaj
+        if (wektor.wezY() < wektor.wezY0()) { // jesli wektor skierowany "w dol" odejmij dlugosc, w przeciwnym wypadku dodaj
             y1 -= wektor.wezY0() - wektor.wezY();
         }
         else {
             y1 += wektor.wezY0() - wektor.wezY();
         }
-        if (wektor.wezX() < wektor.wezX0()) { // jesli wektor skierowany "z dala od obserwatora" odejmij dlugosc, w przeciwnym wypadku dodaj
+        if (wektor.wezZ() < wektor.wezZ0()) { // jesli wektor skierowany "z dala od obserwatora" odejmij dlugosc, w przeciwnym wypadku dodaj
             z1 -= wektor.wezZ0() - wektor.wezZ();
         }
         else {
@@ -66,13 +66,13 @@ void punkt3D::przesun(const wektor3D &wektor) {
     }
 }
 
-void punkt3D::rzut2D(int a, int b){
+punkt2D punkt3D::rzut2D(int a, int b){ // dodac wyjatek kiedy z0-z1=0 aby nie dzielic przez 0
     int d = a;
     int z0 = b;
     int x2 = (z0 * x1 - z1 * d) / (z0 - z1);
     int y2 = (z0 * y1) / (z0 - z1);
     
-    punkt2D(x2, y2);
-    cout << "Zrzutowano punkt 3d na wspolrzedne: (" << x2 << ", " << y2 << ")";
+    return punkt2D(x2, y2);
+    
 
 }
