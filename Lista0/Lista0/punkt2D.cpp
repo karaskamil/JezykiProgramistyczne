@@ -8,17 +8,17 @@ punkt2D::punkt2D() {
     y1 = 1;
 }
 
-punkt2D::punkt2D(int a, int b) {
+punkt2D::punkt2D(double a, double b) {
     x1 = a;
     y1 = b;
 
 }
 
-int punkt2D::wezX() const {
+double punkt2D::wezX() const {
     return x1;
 }
 
-int punkt2D::wezY() const {
+double punkt2D::wezY() const {
     return y1;
 }
 

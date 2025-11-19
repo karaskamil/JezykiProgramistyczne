@@ -7,107 +7,80 @@ wektor3D::wektor3D() {
     x1 = 1;
     y1 = 1;
     z1 = 1;
-    x0 = 0;
-    y0 = 0;
-    z0 = 0;
 
 }
 
-wektor3D::wektor3D(int a, int b, int c) {
+wektor3D::wektor3D(double a, double b, double c) {
     x1 = a;
     y1 = b;
     z1 = c;
-    x0 = 0;
-    y0 = 0;
-    z0 = 0;
-}
-
-wektor3D::wektor3D(int a, int b, int c, int d, int e, int f) {
-    x0 = a;
-    y0 = b;
-    z0 = c;
-    x1 = d;
-    y1 = e;
-    z1 = f;
 
 }
 
-int wektor3D::wezX() const{
-    return x1;
-}
-
-int wektor3D::wezY() const{
-    return y1;
-}
-
-int wektor3D::wezZ() const{
-    return z1;
-}
-
-int wektor3D::wezX0() const {
-    return x0;
-}
-
-int wektor3D::wezY0() const {
-    return y0;
-}
-
-int wektor3D::wezZ0() const {
-    return z0;
-}
-
-double wektor3D::dlugosc() const {
-    if (x0 == 0 && y0 == 0) {
-        return sqrt(x1 * x1 + y1 * y1 + z1 * z1);
-    }
-    else {
-        double u = x1 - x0;
-        double i = y1 - y0;
-        double j = z1 - z0;
-        return sqrt(u * u + i * i + j * j);
-    }
+wektor3D::wektor3D(double a, double b, double c, double d, double e, double f) {
+    x1 = d-a;
+    y1 = e-b;
+    z1 = f-c;
     
 }
 
+double wektor3D::wezX() const{
+    return x1;
+}
+
+double wektor3D::wezY() const{
+    return y1;
+}
+
+double wektor3D::wezZ() const{
+    return z1;
+}
+
+double wektor3D::dlugosc() const {
+    return sqrt(x1 * x1 + y1 * y1 + z1 * z1);
+}
+
 double wektor3D::policzKat(const wektor3D& drugi) {
-    double iloczyn = x1 * drugi.x1 + y1 * drugi.y1 + z1 * drugi.z1;
+    double iloczyn = iloczynSkalarny(drugi);
     double dl1 = this->dlugosc();
     double dl2 = drugi.dlugosc();
-    double Kat = iloczyn / (dl1 * dl2);
-    return acos(Kat) * 180 / 3.14;
+    try {
+        if (dl1 != 0 && dl2 != 0) {
+            double Kat = iloczyn / (dl1 * dl2);
+            return acos(Kat) * 180 / 3.14;
+        }
+        else {
+            throw(0);
+        }
+        
+    }
+    catch (int) {
+        cout << "dlugosc jednego z wektorow wynosi 0, wiec nie da sie podzielic" << endl;
+        return 0;
+    }
+
 }
 
-void wektor3D::dodajWektor(const wektor3D& drugi) { // tutaj brakuje obliczenia z
-    if (x0 == 0 && y0 == 0) {
-        this->x1 += drugi.x1;
-        this->y1 += drugi.y1;
-    }
-    else {
-        this->x1 += drugi.x1 - drugi.x0;
-        this->y1 += drugi.y1 - drugi.y0;
-    }
+void wektor3D::dodajWektor(const wektor3D& drugi) {
+    this->x1 += drugi.x1;
+    this->y1 += drugi.y1;
+    this->z1 += drugi.z1;
 }
 
-void wektor3D::odejmijWektor(const wektor3D& drugi) { // tu tez
-    if (this->x0 == drugi.x0 && this->y0 == drugi.y0) {
-        this->x1 -= drugi.x1;
-        this->y1 -= drugi.y1;
-    }
-    else {
-        this->x1 -= drugi.x1 - drugi.x0;
-        this->y1 -= drugi.y1 - drugi.y0;
-    }
+void wektor3D::odejmijWektor(const wektor3D& drugi) { 
+    this->x1 -= drugi.wezX();
+    this->y1 -= drugi.wezY();
+    this->z1 -= drugi.wezZ();
 }
 
 wektor3D wektor3D::iloczynWektorowy(const wektor3D& drugi) const {
-    int x = this->wezY() * drugi.wezZ() - this->wezZ() * drugi.wezY();
-    int y = this->wezZ() * drugi.wezX() - this->wezX() * drugi.wezZ();
-    int z = this->wezX() * drugi.wezY() - this->wezY() * drugi.wezX();
+    double x = this->y1 * drugi.wezZ() - this->z1 * drugi.wezY();
+    double y = this->z1 * drugi.wezX() - this->x1 * drugi.wezZ();
+    double z = this->x1 * drugi.wezY() - this->y1 * drugi.wezX();
     
     return wektor3D(x, y, z);
 }
 
-int wektor3D::iloczynSkalarny(const wektor3D& drugi) // to powinno uwzgledniac punkt poczatkowy, albo przerobic parametry klasy wektor tak aby byly zapisane od razu odleglosci a nie punkty startowe i koncowe
-{
-    return this->wezX()*drugi.wezX() + this->wezY() * drugi.wezY() + this->wezZ() * drugi.wezZ();
+double wektor3D::iloczynSkalarny(const wektor3D& drugi) {
+    return this->x1*drugi.wezX() + this->y1 * drugi.wezY() + this->z1 * drugi.wezZ();
 }

@@ -12,22 +12,22 @@ punkt3D::punkt3D() {
 
 }
 
-punkt3D::punkt3D(int a, int b, int c) {
+punkt3D::punkt3D(double a, double b, double c) {
     x1 = a;
     y1 = b;
     z1 = c;
 
 }
 
-int punkt3D::wezX() const {
+double punkt3D::wezX() const {
     return x1;
 }
 
-int punkt3D::wezY() const {
+double punkt3D::wezY() const {
     return y1;
 }
 
-int punkt3D::wezZ() const {
+double punkt3D::wezZ() const {
     return z1;
 }
 
@@ -36,43 +36,21 @@ void punkt3D::wyswietl() const {
 
 }
 
-void punkt3D::przesun(const wektor3D &wektor) { 
-    if (wektor.wezX0() == 0 && wektor.wezY0() == 0 && wektor.wezZ0() == 0) {
-        x1 += wektor.wezX();
-        y1 += wektor.wezY();
-        z1 += wektor.wezZ();
+punkt3D punkt3D::przesun(const wektor3D &wektor) const { 
+    double a = this->x1 + wektor.wezX();
+    double b = this->y1 + wektor.wezY();
+    double c = this->z1 + wektor.wezZ();
+    return (punkt3D(a, b, c));
 
-    }
-    else { // bierze pod uwage punkt poczatkowy i zwrot wektora
-        if (wektor.wezX() < wektor.wezX0()) { // jesli wektor skierowany "w lewo" odejmij dlugosc, w przeciwnym wypadku dodaj
-            x1 -= wektor.wezX0() - wektor.wezX(); 
-        }
-        else {
-            x1 += wektor.wezX0() - wektor.wezX();
-        }
-        if (wektor.wezY() < wektor.wezY0()) { // jesli wektor skierowany "w dol" odejmij dlugosc, w przeciwnym wypadku dodaj
-            y1 -= wektor.wezY0() - wektor.wezY();
-        }
-        else {
-            y1 += wektor.wezY0() - wektor.wezY();
-        }
-        if (wektor.wezZ() < wektor.wezZ0()) { // jesli wektor skierowany "z dala od obserwatora" odejmij dlugosc, w przeciwnym wypadku dodaj
-            z1 -= wektor.wezZ0() - wektor.wezZ();
-        }
-        else {
-            z1 += wektor.wezZ0() - wektor.wezZ();
-        }
-    
-    }
 }
 
-punkt2D punkt3D::rzut2D(int a, int b){ // dodac wyjatek kiedy z0-z1=0 aby nie dzielic przez 0
-    int d = a;
-    int z0 = b;
-    int x2 = (z0 * x1 - z1 * d) / (z0 - z1);
-    int y2 = (z0 * y1) / (z0 - z1);
+void punkt3D::rzut2D(double a, double b){
+    double d = a;
+    double z0 = b;
+    double x2 = (z0 * x1 - z1 * d) / (z0 - z1);
+    double y2 = (z0 * y1) / (z0 - z1);
     
-    return punkt2D(x2, y2);
-    
+    punkt2D(x2, y2);
+    cout << "Zrzutowano punkt 3d na wspolrzedne: (" << x2 << ", " << y2 << ")";
 
 }

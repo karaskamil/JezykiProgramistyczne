@@ -8,38 +8,24 @@ using namespace std;
 
 class wektor3D {
 private:
+    double x1; // dlugosc na szerokosc wektora
 
-    int x0; // poczatkowa szerokosc wektora, ktora domyslnie zaczyna sie w punkcie 0 
+    double y1; // dlugosc na wysokosc wektora
 
-    int y0; // poczatkowa wysokosc wektora, ktora domyslnie zaczyna sie w punkcie 0
-
-    int z0; // poczatkowa glebokosc wektora, ktora domyslnie zaczyna sie w punkcie 0
-
-    int x1; // koncowa szerokosc wektora
-
-    int y1; // koncowa wysokosc wektora
-
-    int z1; // koncowa glebokosc wektora
-
+    double z1; // dlugosc na glebokosc wektora
 
 public:
     wektor3D(); // Konstruktor domyslny
 
-    wektor3D(int a, int b, int c); // Konstruktor tworzacy wektor na plaszczyznie trojwymiarowej z bazowym punktem startowym na pozycji (0,0)
+    wektor3D(double a, double b, double c); // Konstruktor tworzacy wektor na plaszczyznie trojwymiarowej z bazowym punktem startowym na pozycji (0,0)
 
-    wektor3D(int a, int b, int c, int d, int e, int f); // Konstruktor tworzacy wektor na plaszczyznie trojwymiarowej z podanymi punktami startowymi i koncowymi przez uzytkownika
+    wektor3D(double a, double b, double c, double d, double e, double f); // Konstruktor tworzacy wektor na plaszczyznie trojwymiarowej z podanymi punktami startowymi i koncowymi przez uzytkownika
 
-    int wezX() const; // zwraca wartosc x1 wektora 3D
+    double wezX() const; // zwraca wartosc x1 wektora 3D
 
-    int wezY() const; // zwraca wartosc y1 wektora 3D
+    double wezY() const; // zwraca wartosc y1 wektora 3D
 
-    int wezZ() const; // zwraca wartosc z1 wektora 3D
-
-    int wezX0() const; // zwraca wartosc x0 wektora 3D
-
-    int wezY0() const; // zwraca wartosc y0 wektora 3D
-
-    int wezZ0() const; // zwraca wartosc z0 wektora 3D
+    double wezZ() const; // zwraca wartosc z1 wektora 3D
 
     double policzKat(const wektor3D& drugi); // liczy kat pomiedzy dwoma wektorami 3D
 
@@ -51,7 +37,7 @@ public:
 
     wektor3D iloczynWektorowy(const wektor3D& drugi) const; //oblicza iloczyn wektorowy dwoch wektorow
 
-    int iloczynSkalarny(const wektor3D& drugi); // oblicza iloczyn skalarny dwoch wektorow
+    double iloczynSkalarny(const wektor3D& drugi); // oblicza iloczyn skalarny dwoch wektorow
 };
 
 #endif

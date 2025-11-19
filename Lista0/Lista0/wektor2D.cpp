@@ -4,54 +4,60 @@
 using namespace std;
 
 wektor2D::wektor2D() {
-    x0 = 1;
-    y0 = 1;
-    x1 = 0;
-    y1 = 0;
+    x1 = 1;
+    y1 = 1;
 }
 
-wektor2D::wektor2D(int a, int b) {
-    x0 = 0;
-    y0 = 0;
+wektor2D::wektor2D(double a, double b) {
     x1 = a;
     y1 = b;
 
 }
 
-wektor2D::wektor2D(int a, int b, int c, int d) {
-    x0 = a;
-    y0 = b;
-    x1 = c;
-    y1 = d;
+wektor2D::wektor2D(double a, double b, double c, double d) {
+    x1 = c-a;
+    y1 = d-b;
+}
+
+double wektor2D::wezX() const {
+    return x1;
+}
+
+double wektor2D::wezY() const {
+    return y1;
 }
 
 void wektor2D::wyswietl() const {
-    cout << "Wektor2D zaczyna sie na nastepujacych wspolrzednych : " << x0 << ", " << y0 << "i konczy sie na: " << x1 << ", " << y1;
+    cout << "Wektor2D ma dlugosc: [" << x1 << ", " << y1 << "]";
 
 }
 
 double wektor2D::dlugosc() const {
-    if (x0 == 0 && y0 == 0) {
         return sqrt(x1 * x1 + y1 * y1);
-    }
-    else {
-        double u = x1 - x0;
-        double i = y1 - y0;
-        return sqrt(u * u + i * i);
-    }
 }
 
-double wektor2D::policzKat(const wektor2D& drugi) { // dodaj wyjatek kiedy dl1*dl2 wynosi 0
-    double iloczyn = this->x1 * drugi.x1 + this->y1 * drugi.y1;
+double wektor2D::policzKat(const wektor2D& drugi) {
+    double iloczyn = iloczynSkalarny(drugi);
     double dl1 = this->dlugosc();
     double dl2 = drugi.dlugosc();
-    double Kat = iloczyn/(dl1*dl2);
-    double stopnie = acos(Kat)*180/3.14;
-    return stopnie;
+    try {
+        if (dl1 != 0 && dl2 != 0) {
+            double Kat = iloczyn / (dl1 * dl2);
+            return acos(Kat) * 180 / 3.14;
+        }
+        else {
+            throw(0);
+        }
+
+    }
+    catch (int) {
+        cout << "dlugosc jednego z wektorow wynosi 0, wiec nie da sie podzielic" << endl;
+        return 0;
+    }
 }
 
 void wektor2D::dodajWektor(const wektor2D& drugi) {
-    if (drugi.x0 == 0 && drugi.y0 == 0) {
+    if (x0 == 0 && y0 == 0) {
         this->x1 += drugi.x1;
         this->y1 += drugi.y1;
     }
@@ -70,4 +76,8 @@ void wektor2D::odejmijWektor(const wektor2D& drugi) {
         this->x1 -= drugi.x1 - drugi.x0;
         this->y1 -= drugi.y1 - drugi.y0;
     }
+}
+
+double wektor2D::iloczynSkalarny(const wektor2D& drugi) {
+    return this->x1 * drugi.wezX() + this->y1 * drugi.wezY();
 }
