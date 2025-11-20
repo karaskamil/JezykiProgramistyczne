@@ -13,16 +13,13 @@ import static java.lang.Math.acos;
  * @author largo
  */
 public class Wektor2D {
-    double x0;
-    double y0;
     double x1;
     double y1;
     
     Wektor2D() {
-        x0 = 1;
-        y0 = 1;
-        x1 = 0;
-        y1 = 0;
+        x1 = 1;
+        y1 = 1;
+        
     }
 
     Wektor2D(double a, double b) {
@@ -32,10 +29,9 @@ public class Wektor2D {
     }
 
     Wektor2D(double a, double b, double c, double d) {
-        
-        
         x1 = c-a;
         y1 = d-b;
+        
     }
 
     void wyswietl() {
@@ -51,9 +47,14 @@ public class Wektor2D {
         double iloczyn = abs(this.x1 * drugi.x1) + abs(this.y1 * drugi.y1);
         double dl1 = this.dlugosc();
         double dl2 = drugi.dlugosc();
-        double Kat = iloczyn/(dl1*dl2);
-        double stopnie = acos(Kat)*180/3.14;
-        return stopnie;
+        
+        if (dl1 != 0 && dl2 != 0) {
+            double Kat = iloczyn / (dl1 * dl2);
+            return acos(Kat) * 180 / 3.14;
+        }
+        else {
+            throw new ArithmeticException("Jedna z dlugosci wektorow wynosi 0, nie da sie podzielic");
+        }
     }
 
     void dodajWektor(Wektor2D drugi) {

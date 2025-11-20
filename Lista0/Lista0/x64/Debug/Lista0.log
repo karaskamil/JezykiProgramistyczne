@@ -1,2 +1,4 @@
-﻿  Lista0.cpp
+﻿  punkt3D.cpp
+C:\Users\largo\Desktop\Projects\Języki Programowania\Lista0\Lista0\punkt3D.cpp(62,9): warning C4551: function call missing argument list
+C:\Users\largo\Desktop\Projects\Języki Programowania\Lista0\Lista0\punkt3D.cpp(64,1): warning C4715: 'punkt3D::rzut2D': not all control paths return a value
   Lista0.vcxproj -> C:\Users\largo\Desktop\Projects\Języki Programowania\Lista0\x64\Debug\Lista0.exe

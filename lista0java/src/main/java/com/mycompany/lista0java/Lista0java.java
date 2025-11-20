@@ -3,17 +3,19 @@ package com.mycompany.lista0java;
 import java.util.Scanner;
 
 public class Lista0java{
-    @SuppressWarnings("empty-statement")
-    public static void main(){
+    public static void main(String[] args){
 
         double g = 0;
         double d = 0;
         double z0 = 0;
+        
         System.out.print( "Wybierz czy chcesz rzutowac punkty (1), czy obliczyc objetosc rownolegloscianu (2): ");
+        
         Scanner s = new Scanner(System.in);
-        char wybor = s.findInLine(".").charAt(0);
+        char wybor = s.next().charAt(0);
+        
         switch (wybor) {
-            case 1 -> {
+            case '1' -> {
                 System.out.println("Podaj ilosc punktow 3d ktore chcesz stworzyc: ");
                 g = s.nextDouble();
                 System.out.println("Podaj parametry rzutowania d: ");
@@ -24,24 +26,24 @@ public class Lista0java{
                     double a = 0;
                     double b = 0;
                     double c = 0;
-                    System.out.print( "Podaj kolejno wartosci x,y,z punktu: ");
+                    System.out.println( "\nPodaj kolejno wartosci x, y, z punktu: ");
                     a = s.nextDouble();
                     b = s.nextDouble();
                     c = s.nextDouble();
-                    Punkt3D p = Punkt3D(a, b, c);
+                    Punkt3D p = new Punkt3D(a, b, c);
                     p.rzut2D(d, z0);
-                };
+                }
             }
 
-            case 2 -> {
-                Punkt3D p30 = Punkt3D(0, 0, 0);
-                Punkt3D p31 = Punkt3D(2, 3, 4);
-                Punkt3D p32 = Punkt3D(10, 15, 16);
-                Punkt3D p33 = Punkt3D(9, 8, 7);
+            case '2' -> {
+                Punkt3D p30 = new Punkt3D(0, 0, 0);
+                Punkt3D p31 = new Punkt3D(2, 3, 4);
+                Punkt3D p32 = new Punkt3D(10, 15, 16);
+                Punkt3D p33 = new Punkt3D(9, 8, 7);
 
-                Wektor3D w30 = Wektor3D(p30.wezX() - p31.wezX(), p30.wezY() - p31.wezY(), p30.wezZ() - p31.wezZ());
-                Wektor3D w31 = Wektor3D(p30.wezX() - p32.wezX(), p30.wezY() - p32.wezY(), p30.wezZ() - p32.wezZ());
-                Wektor3D w32 = Wektor3D(p30.wezX() - p33.wezX(), p30.wezY() - p33.wezY(), p30.wezZ() - p33.wezZ());
+                Wektor3D w30 = new Wektor3D(p30.wezX() - p31.wezX(), p30.wezY() - p31.wezY(), p30.wezZ() - p31.wezZ());
+                Wektor3D w31 = new Wektor3D(p30.wezX() - p32.wezX(), p30.wezY() - p32.wezY(), p30.wezZ() - p32.wezZ());
+                Wektor3D w32 = new Wektor3D(p30.wezX() - p33.wezX(), p30.wezY() - p33.wezY(), p30.wezZ() - p33.wezZ());
                 Wektor3D wiw = w30.iloczynWektorowy(w31);
 
                 double V = wiw.iloczynSkalarny(w32);

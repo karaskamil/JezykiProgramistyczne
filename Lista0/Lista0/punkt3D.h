@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "wektor3D.h"
+#include "punkt2D.h"
 
 using namespace std;
 
@@ -29,7 +30,7 @@ public:
 
     punkt3D przesun(const wektor3D& wektor) const; // tworzy nowy punkt przesuniety o wektor
 
-    void rzut2D(double a, double b); // rzutowanie punktu3D na os 2D przy pomocy jakiegos parametru d nie wiem o co biega
+    punkt2D rzut2D(double a, double b); // rzutowanie punktu3D na os 2D przy pomocy jakiegos parametru d nie wiem o co biega
 
 };
 

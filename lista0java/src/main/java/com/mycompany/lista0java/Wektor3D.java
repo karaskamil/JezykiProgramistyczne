@@ -4,6 +4,7 @@
  */
 package com.mycompany.lista0java;
 
+import static java.lang.Math.abs;
 import static java.lang.Math.acos;
 import static java.lang.Math.sqrt;
 
@@ -63,7 +64,7 @@ public class Wektor3D {
             return acos(Kat) * 180 / 3.14;
         }
         else {
-            throw new ArithmeticException("Jedna z dlugosci wektorow wynosi 0, nie da sie podzielic");
+            throw new ArithmeticException("\nJedna z dlugosci wektorow wynosi 0, nie da sie podzielic");
         }
 
     }
@@ -85,11 +86,11 @@ public class Wektor3D {
         double y = this.z1 * drugi.wezX() - this.x1 * drugi.wezZ();
         double z = this.x1 * drugi.wezY() - this.y1 * drugi.wezX();
 
-        return Wektor3D(x, y, z);
+        return new Wektor3D(x, y, z);
     }
 
     double iloczynSkalarny(Wektor3D drugi){
-        return this.x1*drugi.wezX() + this.y1 * drugi.wezY() + this.z1 * drugi.wezZ();
+        return abs(this.x1*drugi.wezX() + this.y1 * drugi.wezY() + this.z1 * drugi.wezZ());
     }
 
 }
