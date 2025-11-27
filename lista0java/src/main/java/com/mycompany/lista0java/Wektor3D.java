@@ -18,9 +18,9 @@ public class Wektor3D {
     double z1;
     
     Wektor3D() {
-    x1 = 1;
-    y1 = 1;
-    z1 = 1;
+        x1 = 1;
+        y1 = 1;
+        z1 = 1;
 
     }
 
@@ -64,7 +64,7 @@ public class Wektor3D {
             return acos(Kat) * 180 / 3.14;
         }
         else {
-            throw new ArithmeticException("\nJedna z dlugosci wektorow wynosi 0, nie da sie podzielic");
+            return 0;
         }
 
     }

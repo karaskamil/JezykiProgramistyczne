@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Lista0java{
     public static void main(String[] args){
-
         double g = 0;
         double d = 0;
         double z0 = 0;

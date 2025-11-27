@@ -17,7 +17,7 @@ public class Punkt2D {
         x1 = 1;
         y1 = 1;
     }
-
+    
     Punkt2D(double a, double b) {
         x1 = a;
         y1 = b;
