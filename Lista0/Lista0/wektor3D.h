@@ -18,9 +18,13 @@ public:
     wektor3D(); // Konstruktor domyslny
 
     wektor3D(double a, double b, double c); // Konstruktor tworzacy wektor na plaszczyznie trojwymiarowej z bazowym punktem startowym na pozycji (0,0)
+    
+    //wektor3D(const punkt3D p); // Konstruktor tworzacy wektor od punktu (0,0) do wspolrzednych punktu 3D
 
     wektor3D(double a, double b, double c, double d, double e, double f); // Konstruktor tworzacy wektor na plaszczyznie trojwymiarowej z podanymi punktami startowymi i koncowymi przez uzytkownika
 
+    //wektor3D(const punkt3D p, punkt3D r); // Konstruktor tworzacy wektor od punktu p do punktu r
+    
     double wezX() const; // zwraca wartosc x1 wektora 3D
 
     double wezY() const; // zwraca wartosc y1 wektora 3D

@@ -1,5 +1,6 @@
 #include <iostream>
 #include "wektor3D.h"
+#include "punkt3D.h"
 
 using namespace std;
 
@@ -16,6 +17,13 @@ wektor3D::wektor3D(double a, double b, double c) {
     z1 = c;
 
 }
+/*
+wektor3D::wektor3D(const punkt3D p){
+    x1 = p.wezX();
+    y1 = p.wezY();
+    z1 = p.wezZ();
+}
+*/
 
 wektor3D::wektor3D(double a, double b, double c, double d, double e, double f) {
     x1 = d-a;
@@ -23,6 +31,12 @@ wektor3D::wektor3D(double a, double b, double c, double d, double e, double f) {
     z1 = f-c;
     
 }
+/*
+wektor3D::wektor3D(const punkt3D p, const punkt3D r){
+    x1 = abs(p.wezX() - r.wezX());
+    y1 = abs(p.wezY() - r.wezY());
+    z1 = abs(p.wezZ() - r.wezZ());
+}*/
 
 double wektor3D::wezX() const{
     return x1;

@@ -57,25 +57,15 @@ double wektor2D::policzKat(const wektor2D& drugi) {
 }
 
 void wektor2D::dodajWektor(const wektor2D& drugi) {
-    if (x0 == 0 && y0 == 0) {
-        this->x1 += drugi.x1;
-        this->y1 += drugi.y1;
-    }
-    else {
-        this->x1 += drugi.x1 - drugi.x0;
-        this->y1 += drugi.y1 - drugi.y0;
-    }
+    this->x1 += drugi.x1;
+    this->y1 += drugi.y1;
+
 }
 
 void wektor2D::odejmijWektor(const wektor2D& drugi) {
-    if (this->x0 == drugi.x0 && this->y0 == drugi.y0) {
-        this->x1 -= drugi.x1;
-        this->y1 -= drugi.y1;
-    }
-    else {
-        this->x1 -= drugi.x1 - drugi.x0;
-        this->y1 -= drugi.y1 - drugi.y0;
-    }
+    this->x1 -= drugi.x1;
+    this->y1 -= drugi.y1;
+
 }
 
 double wektor2D::iloczynSkalarny(const wektor2D& drugi) {

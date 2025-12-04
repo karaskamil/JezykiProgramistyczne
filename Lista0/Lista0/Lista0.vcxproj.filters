@@ -30,6 +30,12 @@
     <ClCompile Include="wektor3D.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ciagPunktow3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="zbiorPunktow3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="punkt2D.h">
@@ -45,6 +51,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="wektor3D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ciagPunktow3D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="zbiorPunktow3D.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

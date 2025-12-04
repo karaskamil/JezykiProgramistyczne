@@ -123,18 +123,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ciagPunktow3D.cpp" />
     <ClCompile Include="Lista0.cpp" />
     <ClCompile Include="punkt2D.cpp" />
     <ClCompile Include="punkt3D.cpp" />
     <ClCompile Include="wektor2D.cpp" />
     <ClCompile Include="wektor3D.cpp" />
+    <ClCompile Include="zbiorPunktow3D.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ciagPunktow3D.h" />
     <ClInclude Include="punkt2D.h" />
     <ClInclude Include="punkt3D.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="wektor2D.h" />
     <ClInclude Include="wektor3D.h" />
+    <ClInclude Include="zbiorPunktow3D.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Lista0.rc" />

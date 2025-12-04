@@ -8,14 +8,10 @@ using namespace std;
 
 class wektor2D {
 private:
-    
-    double x0; // poczatkowa szerokosc wektora, ktora bazowo zaczyna sie w punkcie 0 
 
-    double y0; // poczatkowa wysokosc wektora, ktora bazowo zaczyna sie w punkcie 0
-    
-    double x1; // koncowa szerokosc wektora
+    double x1; // szerokosc wektora
 
-    double y1; // koncowa wysokosc wektora
+    double y1; // wysokosc wektora
 
 public:
     wektor2D(); // Konstruktor domyslny

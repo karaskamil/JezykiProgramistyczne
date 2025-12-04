@@ -19,6 +19,15 @@ punkt3D::punkt3D(double a, double b, double c) {
 
 }
 
+bool punkt3D::operator ==(const punkt3D& drugi) const {
+    return x1 == drugi.wezX() && y1 == drugi.wezY() && z1 == drugi.wezZ();
+}
+
+ostream& operator<<(ostream& os, const punkt3D& p){
+    os << "(" << p.wezX() << "," << p.wezY() << "," << p.wezZ() << ") ";
+    return os;
+}
+
 double punkt3D::wezX() const {
     return x1;
 }
@@ -32,7 +41,7 @@ double punkt3D::wezZ() const {
 }
 
 void punkt3D::wyswietl() const {
-    cout << "Punkt3D znajduje sie na nastepujacych wspolrzednych: (" << x1 << "," << y1 << "," << z1 << ")";
+    cout <<"(" << x1 << ", " << y1 << ", " << z1 << ")";
 
 }
 

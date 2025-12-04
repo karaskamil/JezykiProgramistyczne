@@ -5,16 +5,19 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <list>
 // moje 
 #include "punkt2D.h"
 #include "wektor2D.h"
 #include "punkt3D.h"
 #include "wektor3D.h"
+#include "ciagPunktow3D.h"
 
 using namespace std;
 
 int main(){
     
+    /*
     int wybor;
     double g = 0;
     double d = 0;
@@ -58,8 +61,37 @@ int main(){
             cout << "objetosc rownolegloboku wynosi " << V << " jednostek szesciennych";
             break;
     };
-    
+    */
     // CZESC TESTOWA
+
+    punkt3D p30 = punkt3D(0, 0, 0);
+    punkt3D p31 = punkt3D(2, 3, 4);
+    punkt3D p32 = punkt3D(10, 15, 16);
+    punkt3D p33 = punkt3D(9, 8, 7);
+
+    ciagPunktow3D l1 = ciagPunktow3D();
+
+    l1.dodajPunkt(p30);
+    l1.dodajPunkt(p31);
+    l1.dodajPunkt(p32);
+    l1.dodajPunkt(p33);
+
+    l1.wyswietl();
+    
+    cout << endl << l1.czyPunktJestWCiagu(p33) << endl;
+    
+    l1.usunPunkt(p31);
+
+    l1.wyswietl();
+
+    cout << endl << l1.czyPunktJestWCiagu(p30) << endl;
+
+    cout << l1.podajPunkt(1) << endl;
+
+    l1.dodajPunkt(p31);
+
+    cout << "Dlugosc ciagu wynosi: " << l1.dlugoscCiagu();
+
     /*
     punkt2D p21 = punkt2D(2, -5);
     //p2.wyswietlX();
