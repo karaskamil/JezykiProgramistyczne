@@ -29,8 +29,7 @@ void ciagPunktow3D::usunPunkt(const punkt3D p) {
 }
 
 bool ciagPunktow3D::czyPunktJestWCiagu(punkt3D p) {
-    auto szukany = find(l.begin(), l.end(), p);
-    return szukany != l.end();
+    return find(l.begin(), l.end(), p) != l.end();
 }
 
 punkt3D ciagPunktow3D::podajPunkt(int i) {
@@ -54,4 +53,3 @@ void ciagPunktow3D::wyswietl() const {
     }
     cout << " ]";
 }
-

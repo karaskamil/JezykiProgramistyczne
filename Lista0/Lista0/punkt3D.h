@@ -38,4 +38,15 @@ public:
 
 };
 
+namespace std {
+    template<>
+    struct hash<punkt3D> {
+        size_t operator()(const punkt3D& p) const {
+            return hash<double>()(p.wezX())
+                ^ (hash<double>()(p.wezY()) << 1)
+                ^ (hash<double>()(p.wezZ()) << 2);
+        }
+    };
+}
+
 #endif

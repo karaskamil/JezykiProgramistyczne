@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\largo\\Desktop\\Projects\\J\u0119zyki Programowania\\Lista0\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7A2FE539-8686-4175-91AA-996234D72CC4}|Lista0\\Lista0.vcxproj|C:\\Users\\largo\\Desktop\\Projects\\J\u0119zyki Programowania\\Lista0\\Lista0\\CiagPunktow3D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7A2FE539-8686-4175-91AA-996234D72CC4}|Lista0\\Lista0.vcxproj|solutionrelative:Lista0\\CiagPunktow3D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7A2FE539-8686-4175-91AA-996234D72CC4}|Lista0\\Lista0.vcxproj|C:\\Users\\largo\\Desktop\\Projects\\J\u0119zyki Programowania\\Lista0\\Lista0\\zbiorPunktow3D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{7A2FE539-8686-4175-91AA-996234D72CC4}|Lista0\\Lista0.vcxproj|solutionrelative:Lista0\\zbiorPunktow3D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -15,20 +19,16 @@
       "RelativeMoniker": "D:0:0:{7A2FE539-8686-4175-91AA-996234D72CC4}|Lista0\\Lista0.vcxproj|solutionrelative:Lista0\\CiagPunktow3D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A2FE539-8686-4175-91AA-996234D72CC4}|Lista0\\Lista0.vcxproj|C:\\Users\\largo\\Desktop\\Projects\\J\u0119zyki Programowania\\Lista0\\Lista0\\CiagPunktow3D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7A2FE539-8686-4175-91AA-996234D72CC4}|Lista0\\Lista0.vcxproj|solutionrelative:Lista0\\CiagPunktow3D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A2FE539-8686-4175-91AA-996234D72CC4}|Lista0\\Lista0.vcxproj|C:\\Users\\largo\\Desktop\\Projects\\J\u0119zyki Programowania\\Lista0\\Lista0\\Lista0.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7A2FE539-8686-4175-91AA-996234D72CC4}|Lista0\\Lista0.vcxproj|solutionrelative:Lista0\\Lista0.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7A2FE539-8686-4175-91AA-996234D72CC4}|Lista0\\Lista0.vcxproj|C:\\Users\\largo\\Desktop\\Projects\\J\u0119zyki Programowania\\Lista0\\Lista0\\punkt3D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{7A2FE539-8686-4175-91AA-996234D72CC4}|Lista0\\Lista0.vcxproj|solutionrelative:Lista0\\punkt3D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7A2FE539-8686-4175-91AA-996234D72CC4}|Lista0\\Lista0.vcxproj|C:\\Users\\largo\\Desktop\\Projects\\J\u0119zyki Programowania\\Lista0\\Lista0\\punkt3D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{7A2FE539-8686-4175-91AA-996234D72CC4}|Lista0\\Lista0.vcxproj|solutionrelative:Lista0\\punkt3D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A2FE539-8686-4175-91AA-996234D72CC4}|Lista0\\Lista0.vcxproj|C:\\Users\\largo\\Desktop\\Projects\\J\u0119zyki Programowania\\Lista0\\Lista0\\Lista0.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7A2FE539-8686-4175-91AA-996234D72CC4}|Lista0\\Lista0.vcxproj|solutionrelative:Lista0\\Lista0.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7A2FE539-8686-4175-91AA-996234D72CC4}|Lista0\\Lista0.vcxproj|C:\\Users\\largo\\Desktop\\Projects\\J\u0119zyki Programowania\\Lista0\\Lista0\\wektor3D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -46,82 +46,82 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "zbiorPunktow3D.cpp",
               "DocumentMoniker": "C:\\Users\\largo\\Desktop\\Projects\\J\u0119zyki Programowania\\Lista0\\Lista0\\zbiorPunktow3D.cpp",
               "RelativeDocumentMoniker": "Lista0\\zbiorPunktow3D.cpp",
               "ToolTip": "C:\\Users\\largo\\Desktop\\Projects\\J\u0119zyki Programowania\\Lista0\\Lista0\\zbiorPunktow3D.cpp",
               "RelativeToolTip": "Lista0\\zbiorPunktow3D.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAUwB0AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-12-04T12:51:12.631Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "zbiorPunktow3D.h",
               "DocumentMoniker": "C:\\Users\\largo\\Desktop\\Projects\\J\u0119zyki Programowania\\Lista0\\Lista0\\zbiorPunktow3D.h",
               "RelativeDocumentMoniker": "Lista0\\zbiorPunktow3D.h",
               "ToolTip": "C:\\Users\\largo\\Desktop\\Projects\\J\u0119zyki Programowania\\Lista0\\Lista0\\zbiorPunktow3D.h",
               "RelativeToolTip": "Lista0\\zbiorPunktow3D.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAmwBMAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-12-04T12:50:53.888Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ciagPunktow3D.cpp",
               "DocumentMoniker": "C:\\Users\\largo\\Desktop\\Projects\\J\u0119zyki Programowania\\Lista0\\Lista0\\ciagPunktow3D.cpp",
               "RelativeDocumentMoniker": "Lista0\\ciagPunktow3D.cpp",
               "ToolTip": "C:\\Users\\largo\\Desktop\\Projects\\J\u0119zyki Programowania\\Lista0\\Lista0\\ciagPunktow3D.cpp",
               "RelativeToolTip": "Lista0\\ciagPunktow3D.cpp",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAEwC4AAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-12-04T08:32:25.682Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "ciagPunktow3D.h",
               "DocumentMoniker": "C:\\Users\\largo\\Desktop\\Projects\\J\u0119zyki Programowania\\Lista0\\Lista0\\ciagPunktow3D.h",
               "RelativeDocumentMoniker": "Lista0\\ciagPunktow3D.h",
               "ToolTip": "C:\\Users\\largo\\Desktop\\Projects\\J\u0119zyki Programowania\\Lista0\\Lista0\\ciagPunktow3D.h",
               "RelativeToolTip": "Lista0\\ciagPunktow3D.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-12-04T08:32:09.388Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "punkt3D.cpp",
               "DocumentMoniker": "C:\\Users\\largo\\Desktop\\Projects\\J\u0119zyki Programowania\\Lista0\\Lista0\\punkt3D.cpp",
               "RelativeDocumentMoniker": "Lista0\\punkt3D.cpp",
               "ToolTip": "C:\\Users\\largo\\Desktop\\Projects\\J\u0119zyki Programowania\\Lista0\\Lista0\\punkt3D.cpp",
               "RelativeToolTip": "Lista0\\punkt3D.cpp",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAEwBoAAABIAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAEgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-11-07T15:17:53.637Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "punkt3D.h",
               "DocumentMoniker": "C:\\Users\\largo\\Desktop\\Projects\\J\u0119zyki Programowania\\Lista0\\Lista0\\punkt3D.h",
               "RelativeDocumentMoniker": "Lista0\\punkt3D.h",
               "ToolTip": "C:\\Users\\largo\\Desktop\\Projects\\J\u0119zyki Programowania\\Lista0\\Lista0\\punkt3D.h",
               "RelativeToolTip": "Lista0\\punkt3D.h",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAEwBoAAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAUwDEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-11-07T15:32:17.034Z",
               "EditorCaption": ""
@@ -136,8 +136,7 @@
               "RelativeToolTip": "Lista0\\wektor3D.cpp",
               "ViewState": "AgIAAC8AAAAAAAAAAAAUwCAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-10-17T14:52:05.127Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-17T14:52:05.127Z"
             },
             {
               "$type": "Document",
@@ -149,12 +148,11 @@
               "RelativeToolTip": "Lista0\\wektor3D.h",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-10-16T16:56:32.823Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-16T16:56:32.823Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Lista0.cpp",
               "DocumentMoniker": "C:\\Users\\largo\\Desktop\\Projects\\J\u0119zyki Programowania\\Lista0\\Lista0\\Lista0.cpp",
               "RelativeDocumentMoniker": "Lista0\\Lista0.cpp",
@@ -162,8 +160,7 @@
               "RelativeToolTip": "Lista0\\Lista0.cpp",
               "ViewState": "AgIAABAAAAAAAAAAAAAEwEwAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-10-14T15:16:41.157Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-14T15:16:41.157Z"
             }
           ]
         }
