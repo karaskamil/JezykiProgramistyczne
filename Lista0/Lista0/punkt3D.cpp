@@ -53,7 +53,7 @@ punkt3D punkt3D::przesun(const wektor3D &wektor) const {
 
 }
 
-punkt2D punkt3D::rzut2D(double a, double b) {
+punkt2D punkt3D::rzut2D(double a, double b) { // wyrzucic try i wrzucic do maina a throw zostaje tutaj
     double d = a;
     double z0 = b;
     try {

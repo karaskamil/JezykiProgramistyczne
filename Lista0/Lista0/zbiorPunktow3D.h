@@ -17,9 +17,11 @@ class zbiorPunktow3D{
 
 		void usunPunkt(const punkt3D& p); // usuniecie podanego punktu ze zbioru
 
-		bool czyPunktJestWZbiorze(const punkt3D& p);
+		bool czyPunktJestWZbiorze(const punkt3D& p); // sprawdza czy punkt jest w zbiorze po hashu
 
-		int mocZbioru() const;
+		int mocZbioru() const; // zwraca ilosc elementow wewnatrz zbioru
+
+		void wyswietl() const; // wyswietlanie wszystkich elementow zbioru
 
 };
 

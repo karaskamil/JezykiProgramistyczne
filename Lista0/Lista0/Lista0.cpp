@@ -12,6 +12,7 @@
 #include "punkt3D.h"
 #include "wektor3D.h"
 #include "ciagPunktow3D.h"
+#include "zbiorPunktow3D.h"
 
 using namespace std;
 
@@ -68,6 +69,7 @@ int main(){
     punkt3D p31 = punkt3D(2, 3, 4);
     punkt3D p32 = punkt3D(10, 15, 16);
     punkt3D p33 = punkt3D(9, 8, 7);
+    punkt3D p34 = punkt3D(10, 15, 16);
 
     ciagPunktow3D l1 = ciagPunktow3D();
 
@@ -75,22 +77,42 @@ int main(){
     l1.dodajPunkt(p31);
     l1.dodajPunkt(p32);
     l1.dodajPunkt(p33);
+    l1.dodajPunkt(p34);
 
     l1.wyswietl();
     
-    cout << endl << l1.czyPunktJestWCiagu(p33) << endl;
+    cout << endl << l1.czyPunktJestWCiagu(p34) << endl;
     
-    l1.usunPunkt(p31);
+    l1.usunPunkt(p32);
 
     l1.wyswietl();
 
-    cout << endl << l1.czyPunktJestWCiagu(p30) << endl;
+    cout << endl << l1.czyPunktJestWCiagu(p34) << endl;
 
-    cout << l1.podajPunkt(1) << endl;
+    cout << "Wypisuje punkt o indeksie 1: " << l1.podajPunkt(1) << endl;
 
-    l1.dodajPunkt(p31);
+    cout << "Dlugosc ciagu wynosi: " << l1.dlugoscCiagu() << endl;
 
-    cout << "Dlugosc ciagu wynosi: " << l1.dlugoscCiagu();
+    // TEST ZBIORU
+
+    cout << "--------test zbioru------" << endl;
+
+    zbiorPunktow3D s1 = zbiorPunktow3D();
+
+    s1.dodajPunkt(p30);
+    s1.dodajPunkt(p31);
+    s1.dodajPunkt(p32);
+    s1.dodajPunkt(p33);
+    s1.dodajPunkt(p34);
+    
+    s1.wyswietl();
+
+    s1.usunPunkt(p34);
+
+    s1.wyswietl();
+
+    cout << "Czy punkt p34 jest w zbiorze: " << s1.czyPunktJestWZbiorze(p34) << endl;
+    cout << "Czy punkt p31 jest w zbiorze: " << s1.czyPunktJestWZbiorze(p31);
 
     /*
     punkt2D p21 = punkt2D(2, -5);

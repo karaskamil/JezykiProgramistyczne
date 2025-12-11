@@ -33,3 +33,11 @@ bool zbiorPunktow3D::czyPunktJestWZbiorze(const punkt3D& p) {
 int zbiorPunktow3D::mocZbioru() const {
     return s.size();
 }
+
+void zbiorPunktow3D::wyswietl() const {
+    cout << "[ ";
+    for (const auto& p : s) {
+        cout << p;
+    }
+    cout << "]" << endl;
+}

@@ -47,9 +47,9 @@ int ciagPunktow3D::dlugoscCiagu() {
 }
 
 void ciagPunktow3D::wyswietl() const {
-    cout << "[";
+    cout << "[ ";
     for (const auto& p : l) {
-            cout <<" (" << p.wezX() << ", " << p.wezY() << ", " << p.wezZ() << ")";
+            cout << p;
     }
-    cout << " ]";
+    cout << "]";
 }
