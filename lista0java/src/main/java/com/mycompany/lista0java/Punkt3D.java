@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.lista0java;
 
 import static java.lang.Math.acos;
@@ -68,6 +64,35 @@ public class Punkt3D {
         else {
             throw new ArithmeticException("\nError: Podano niewlasciwe parametry, nie da sie dzielic przez 0");
         }
+    }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof Punkt3D)) return false;
+        Punkt3D p = (Punkt3D) obj;
+        return Double.compare(x1, p.x1) == 0 &&
+               Double.compare(y1, p.y1) == 0 &&
+               Double.compare(z1, p.z1) == 0;
+    }
+    
+    // Wyświetlanie punktu jako String – potrzebne do System.out.print w ciągu
+    @Override
+    public String toString() {
+        return "(" + x1 + "," + y1 + "," + z1 + ")";
+    }
+
+    // A to jakiś hash, tego też nie rozumiem
+    @Override
+    public int hashCode() {
+    int hash = 7;
+    long temp;
+    temp = Double.doubleToLongBits(x1);
+    hash = 31 * hash + (int)(temp ^ (temp >>> 32));
+    temp = Double.doubleToLongBits(y1);
+    hash = 31 * hash + (int)(temp ^ (temp >>> 32));
+    temp = Double.doubleToLongBits(z1);
+    hash = 31 * hash + (int)(temp ^ (temp >>> 32));
+    return hash;
     }
 }

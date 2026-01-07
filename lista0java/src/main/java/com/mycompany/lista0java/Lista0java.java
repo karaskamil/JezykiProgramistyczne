@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Lista0java{
     public static void main(String[] args){
-
+        /*
         double g = 0;
         double d = 0;
         double z0 = 0;
@@ -50,7 +50,8 @@ public class Lista0java{
                 System.out.print("objetosc rownolegloboku wynosi " + V + " jednostek szesciennych");
             }
         }
-
+        */
+        
         // CZESC TESCIOWA
         /*
         punkt2D p21 = punkt2D(2, -5);
@@ -88,6 +89,64 @@ public class Lista0java{
         Wektor3D w36 = Wektor3D(6, 7, 8);
         System.out.print(w35.policzKat(w36));
         */
+        
+        System.out.println("------CIAG------ ");
+        
+        Punkt3D p30 = new Punkt3D(0, 0, 0);
+        Punkt3D p31 = new Punkt3D(2, 3, 4);
+        Punkt3D p32 = new Punkt3D(10, 15, 16);
+        Punkt3D p33 = new Punkt3D(9, 8, 7);
+        Punkt3D p34 = new Punkt3D(10, 15, 16);
 
+        CiagPunktow3D l1 = new CiagPunktow3D();
+
+        l1.dodajPunkt(p30);
+        l1.dodajPunkt(p31);
+        l1.dodajPunkt(p32);
+        l1.dodajPunkt(p33);
+        l1.dodajPunkt(p34);
+
+        l1.wyswietl();
+
+        System.out.println(l1.czyPunktJestWCiagu(p34));
+
+        l1.usunPunkt(p32);
+
+        l1.wyswietl();
+
+        System.out.println("Czy punkt p34 jest w zbiorze: " + l1.czyPunktJestWCiagu(p34));
+
+        System.out.println("Wypisuje punkt o indeksie 1: " + l1.podajPunkt(1));
+
+        System.out.println("Dlugosc ciagu wynosi: " + l1.dlugoscCiagu());
+
+        // TEST ZBIORU
+        
+        System.out.println("------ZBIOR------ ");
+
+        ZbiorPunktow3D s1 = new ZbiorPunktow3D();
+
+        s1.dodajPunkt(p30);
+        s1.dodajPunkt(p31);
+        s1.dodajPunkt(p32);
+        s1.dodajPunkt(p33);
+        s1.dodajPunkt(p34);
+
+        s1.wyswietl();
+        
+        System.out.println("Moc zbioru wynosi: " + s1.mocZbioru());
+        
+        System.out.println("Czy punkt p34 jest w zbiorze: " + s1.czyPunktJestWZbiorze(p34));
+        
+        s1.usunPunkt(p34);
+
+        s1.wyswietl();
+
+        System.out.println("Czy punkt p34 jest w zbiorze: " + s1.czyPunktJestWZbiorze(p34));
+        
+        System.out.println("Czy punkt p32 jest w zbiorze: " + s1.czyPunktJestWZbiorze(p32));
+        
+        System.out.println("Czy punkt p31 jest w zbiorze: " + s1.czyPunktJestWZbiorze(p31));
+    
     }
 }
